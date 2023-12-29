@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+
+
+
+{% block title %}Login{% endblock %}
+{%load crispy_forms_tags%}
+
+{% block content %}
+ 
+    <form action="" method="POST" class="form-group">
+    {%csrf_token%}
+	{{ form}}
+	
+	<button class='btn-outline-info' type="submit" class="btn btn-success">Login</button>
+    
+   
+    </form>
+    
+<div class='border-top pt-3'>
+     <p>New?<a class="ml-2" href='/register'> Create Account</a></p>
+     </div>
+{% endblock %}

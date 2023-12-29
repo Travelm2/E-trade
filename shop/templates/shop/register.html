@@ -1,0 +1,21 @@
+{% extends "shop/base.html" %}
+
+<head>
+    <link rel='stylesheet' type='text/css' href='https://bootswatch.com/5/lux/bootstrap.min.css'/>
+</head>
+ 
+
+{% block title %}Create an Account{% endblock %}
+{%load crispy_forms_tags%}
+
+{% block content %}
+   <h1>Create an Account</h1>
+    <form  method="POST" class="form-group">
+    {%csrf_token%}
+	{{form.as_p}}
+	
+	<button type="submit" class="btn btn-success">Register</button>
+    </form>
+    
+    
+{% endblock %}
